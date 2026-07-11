@@ -1,9 +1,19 @@
+/**
+ * Admin Dashboard Sidebar Navigation Component.
+ * @module components/dashboard/Sidebar
+ */
 import React from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../hooks/useAuth';
 import { LayoutDashboard, Users, BarChart3, Activity, LogOut, GraduationCap } from 'lucide-react';
 import Button from '../shared/Button';
 
+/**
+ * Renders the persistent left-hand sidebar menu for the admin dashboard.
+ * Includes navigational links and a logout trigger.
+ * 
+ * @returns {React.ReactElement} The rendered sidebar container.
+ */
 const Sidebar = () => {
   const { logout, user } = useAuth();
   const navigate = useNavigate();

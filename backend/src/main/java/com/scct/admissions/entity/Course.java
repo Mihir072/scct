@@ -9,6 +9,10 @@ import java.math.BigDecimal;
 import java.time.OffsetDateTime;
 import java.util.UUID;
 
+/**
+ * Represents an academic program or course offered by the institution.
+ * Used for categorizing leads, placements, and faculty assignments.
+ */
 @Entity
 @Table(name = "courses")
 @Getter

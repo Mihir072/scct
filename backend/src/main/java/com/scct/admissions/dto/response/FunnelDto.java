@@ -7,6 +7,10 @@ import lombok.NoArgsConstructor;
 
 import java.util.List;
 
+/**
+ * Data Transfer Object (DTO) representing a complete snapshot of the admissions funnel.
+ * Contains a sequentially ordered list of stage metrics.
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

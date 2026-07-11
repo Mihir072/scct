@@ -1,9 +1,26 @@
+/**
+ * Public Course Card Component.
+ * @module components/public/CourseCard
+ */
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { BookOpen, Calendar, IndianRupee, ArrowRight } from 'lucide-react';
 import Button from '../shared/Button';
 import { formatCurrency } from '../../utils/formatters';
 
+/**
+ * Displays an individual academic course summary in a stylish card format.
+ * 
+ * @param {Object} props - React component props.
+ * @param {Object} props.course - The course data object.
+ * @param {string} props.course.name - The full name of the course.
+ * @param {string} props.course.slug - URL-friendly identifier.
+ * @param {string} props.course.stream - The academic department stream.
+ * @param {number} props.course.durationYears - Course duration in years.
+ * @param {number} props.course.feesPerYear - Annual tuition fees.
+ * @param {string} props.course.eligibilityCriteria - Brief eligibility requirements.
+ * @returns {React.ReactElement} The rendered course card component.
+ */
 const CourseCard = ({ course }) => {
   const { name, slug, stream, durationYears, feesPerYear, eligibilityCriteria } = course;
 

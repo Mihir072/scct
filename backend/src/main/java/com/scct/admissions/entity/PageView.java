@@ -7,6 +7,10 @@ import org.hibernate.annotations.CreationTimestamp;
 import java.time.OffsetDateTime;
 import java.util.UUID;
 
+/**
+ * Captures anonymous web traffic telemetry.
+ * Logs page hits and associates them with active UTM parameters for marketing analysis.
+ */
 @Entity
 @Table(name = "page_views")
 @Getter

@@ -7,6 +7,9 @@ import lombok.NoArgsConstructor;
 
 import java.util.UUID;
 
+/**
+ * Data Transfer Object (DTO) for presenting faculty profiles and their course associations.
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

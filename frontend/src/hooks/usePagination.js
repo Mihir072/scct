@@ -1,5 +1,16 @@
+/**
+ * Custom React hook for managing tabular pagination state mechanisms.
+ * @module hooks/usePagination
+ */
 import { useState } from 'react';
 
+/**
+ * Provides state variables and handler functions for navigating paginated record sets.
+ * 
+ * @param {number} [initialPage=0] - The default zero-indexed starting page.
+ * @param {number} [initialSize=10] - The default number of records per page.
+ * @returns {Object} An object containing pagination state values and navigational setter methods.
+ */
 export const usePagination = (initialPage = 0, initialSize = 10) => {
   const [page, setPage] = useState(initialPage);
   const [size, setSize] = useState(initialSize);

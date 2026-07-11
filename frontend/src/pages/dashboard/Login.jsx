@@ -1,3 +1,7 @@
+/**
+ * Admin Login Page.
+ * @module pages/dashboard/Login
+ */
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../../hooks/useAuth';
@@ -5,6 +9,12 @@ import Button from '../../components/shared/Button';
 import Input from '../../components/shared/Input';
 import { GraduationCap, ShieldAlert, Key, User } from 'lucide-react';
 
+/**
+ * Renders the authentication gateway for the admin dashboard.
+ * Captures user credentials and leverages the global AuthContext for secure portal access.
+ * 
+ * @returns {React.ReactElement} The rendered login interface.
+ */
 const Login = () => {
   const { login, error: authError } = useAuth();
   const navigate = useNavigate();

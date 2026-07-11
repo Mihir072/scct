@@ -4,6 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * Data Transfer Object (DTO) returning the JWT authentication token upon successful admin login.
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

@@ -1,3 +1,7 @@
+/**
+ * Public Layout Wrapper Component.
+ * @module pages/public/PublicLayout
+ */
 import React, { useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
 import Navbar from '../../components/public/Navbar';
@@ -5,6 +9,12 @@ import Footer from '../../components/public/Footer';
 import { usePageViewTracker } from '../../hooks/usePageViewTracker';
 import { captureUtmParameters } from '../../utils/utmCapture';
 
+/**
+ * Provides the persistent shell structure (navbar + main content area + footer) for all public-facing views.
+ * Handles global side-effects like UTM parameter capture and silent page view tracking.
+ * 
+ * @returns {React.ReactElement} The rendered layout structure.
+ */
 const PublicLayout = () => {
   // Capture marketing UTM parameters on mount (Home or Admissions pages)
   useEffect(() => {

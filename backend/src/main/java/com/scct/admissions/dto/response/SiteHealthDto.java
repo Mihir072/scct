@@ -7,6 +7,10 @@ import lombok.NoArgsConstructor;
 
 import java.util.List;
 
+/**
+ * Data Transfer Object (DTO) representing the overall system diagnostics.
+ * Includes submission success rates, traffic metrics, and basic uptime indicators.
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

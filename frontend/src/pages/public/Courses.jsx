@@ -1,3 +1,7 @@
+/**
+ * Public Courses Directory Page.
+ * @module pages/public/Courses
+ */
 import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { getCourses } from '../../api/courses';
@@ -5,6 +9,12 @@ import CourseCard from '../../components/public/CourseCard';
 import Button from '../../components/shared/Button';
 import LoadingSpinner from '../../components/shared/LoadingSpinner';
 
+/**
+ * Renders the primary directory of all available academic programs.
+ * Allows filtering of courses by academic stream using URL search parameters.
+ * 
+ * @returns {React.ReactElement} The rendered courses directory grid.
+ */
 const Courses = () => {
   const [courses, setCourses] = useState([]);
   const [loading, setLoading] = useState(true);

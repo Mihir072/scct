@@ -7,6 +7,10 @@ import lombok.NoArgsConstructor;
 
 import java.util.List;
 
+/**
+ * Data Transfer Object (DTO) wrapping conversion performance analytics.
+ * Aggregates both course-specific and source-specific conversion statistics.
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

@@ -1,6 +1,21 @@
+/**
+ * Admin Dashboard Site Health Panel Component.
+ * @module components/dashboard/SiteHealthPanel
+ */
 import React from 'react';
 import { Activity, ShieldCheck, AlertCircle, FileText, Percent } from 'lucide-react';
 
+/**
+ * Renders a row of system diagnostic cards including database uptime, form submission success rates, and top page traffic.
+ * 
+ * @param {Object} props - React component props.
+ * @param {Object} [props.healthData] - Aggregate system health statistics.
+ * @param {number} [props.healthData.formSubmissionSuccessRate] - Percentage of successful forms.
+ * @param {Array} [props.healthData.pageTraffic] - Array of page view count objects.
+ * @param {boolean} [props.healthData.uptimeIndicator] - Boolean indicating backend DB health status.
+ * @param {boolean} [props.loading=false] - Whether the data is currently fetching.
+ * @returns {React.ReactElement} The rendered health diagnostics panels.
+ */
 const SiteHealthPanel = ({ healthData, loading = false }) => {
   if (loading) {
     return (

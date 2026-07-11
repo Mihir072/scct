@@ -1,3 +1,7 @@
+/**
+ * Public Placements Statistics Page.
+ * @module pages/public/Placements
+ */
 import React, { useState, useEffect } from 'react';
 import { getPlacements, getPlacementsSummary } from '../../api/placements';
 import { getCourses } from '../../api/courses';
@@ -7,6 +11,12 @@ import LoadingSpinner from '../../components/shared/LoadingSpinner';
 import { formatCurrency, formatPackage } from '../../utils/formatters';
 import { Award, Briefcase, Calendar } from 'lucide-react';
 
+/**
+ * Renders a comprehensive view of historical placement data.
+ * Includes a summary dashboard and a filterable table showing specific company placements, salaries, and hiring volumes.
+ * 
+ * @returns {React.ReactElement} The rendered placements page view.
+ */
 const Placements = () => {
   const [placements, setPlacements] = useState([]);
   const [summary, setSummary] = useState(null);

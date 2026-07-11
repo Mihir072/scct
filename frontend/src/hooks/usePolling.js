@@ -1,3 +1,7 @@
+/**
+ * Custom React hook for establishing periodic data polling routines.
+ * @module hooks/usePolling
+ */
 import { useEffect, useRef } from 'react';
 
 /**

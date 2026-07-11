@@ -7,6 +7,9 @@ import lombok.NoArgsConstructor;
 
 import java.util.List;
 
+/**
+ * Data Transfer Object (DTO) providing aggregated placement statistics for dashboard display.
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

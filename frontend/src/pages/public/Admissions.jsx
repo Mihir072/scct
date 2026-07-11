@@ -1,3 +1,7 @@
+/**
+ * Public Admissions Enquiry Form Page.
+ * @module pages/public/Admissions
+ */
 import React, { useState, useEffect } from 'react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
@@ -26,6 +30,13 @@ const enquirySchema = z.object({
   message: z.string().optional().or(z.literal('')),
 });
 
+/**
+ * Renders the multi-step admissions enquiry form for prospective students.
+ * Integrates Zod schema validation, react-hook-form state management, and UTM parameter capture.
+ * Submits lead data to the backend API and redirects to a success page.
+ * 
+ * @returns {React.ReactElement} The rendered admissions form view.
+ */
 const Admissions = () => {
   const [courses, setCourses] = useState([]);
   const [searchParams] = useSearchParams();

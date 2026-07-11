@@ -1,3 +1,7 @@
+/**
+ * Public Faculty Directory Page.
+ * @module pages/public/Faculty
+ */
 import React, { useState, useEffect } from 'react';
 import { getFaculty } from '../../api/faculty';
 import { getCourses } from '../../api/courses';
@@ -5,6 +9,12 @@ import FacultyCard from '../../components/public/FacultyCard';
 import Select from '../../components/shared/Select';
 import LoadingSpinner from '../../components/shared/LoadingSpinner';
 
+/**
+ * Renders a directory of academic faculty and staff members.
+ * Supports dynamic filtering by department or associated course program.
+ * 
+ * @returns {React.ReactElement} The rendered faculty directory grid.
+ */
 const Faculty = () => {
   const [faculty, setFaculty] = useState([]);
   const [courses, setCourses] = useState([]);

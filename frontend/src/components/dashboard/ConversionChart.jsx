@@ -1,3 +1,7 @@
+/**
+ * Admin Dashboard Conversion Chart Component.
+ * @module components/dashboard/ConversionChart
+ */
 import React from 'react';
 import {
   BarChart,
@@ -9,6 +13,17 @@ import {
   ResponsiveContainer,
 } from 'recharts';
 
+/**
+ * Renders twin bar charts showing lead conversion rates broken down by course and by source.
+ * Utilizes the 'recharts' library for rendering SVGs.
+ * 
+ * @param {Object} props - React component props.
+ * @param {Object} [props.conversionData] - Aggregate conversion statistics.
+ * @param {Array} [props.conversionData.courseConversion] - Array of course conversion objects.
+ * @param {Array} [props.conversionData.sourceConversion] - Array of source conversion objects.
+ * @param {boolean} [props.loading=false] - Whether the data is currently fetching.
+ * @returns {React.ReactElement} The rendered dual bar charts or loading/empty states.
+ */
 const ConversionChart = ({ conversionData, loading = false }) => {
   if (loading) {
     return (

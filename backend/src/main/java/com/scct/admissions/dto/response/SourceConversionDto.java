@@ -5,6 +5,9 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * Data Transfer Object (DTO) representing the admission conversion rate segmented by lead acquisition source.
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

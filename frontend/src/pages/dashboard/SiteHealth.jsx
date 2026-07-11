@@ -1,3 +1,7 @@
+/**
+ * Admin Site Health & Traffic Page.
+ * @module pages/dashboard/SiteHealth
+ */
 import React, { useState, useCallback } from 'react';
 import { getSiteHealth } from '../../api/dashboard';
 import SiteHealthPanel from '../../components/dashboard/SiteHealthPanel';
@@ -6,6 +10,12 @@ import Button from '../../components/shared/Button';
 import LoadingSpinner from '../../components/shared/LoadingSpinner';
 import usePolling from '../../hooks/usePolling';
 
+/**
+ * Renders the system diagnostics page to monitor web traffic, backend DB uptime, and form error rates.
+ * Provides date-range filters to bound the displayed metrics.
+ * 
+ * @returns {React.ReactElement} The rendered diagnostics page.
+ */
 const SiteHealth = () => {
   const [healthData, setHealthData] = useState(null);
   const [loading, setLoading] = useState(true);

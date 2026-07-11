@@ -1,8 +1,18 @@
+/**
+ * Public Global Navigation Bar Component.
+ * @module components/public/Navbar
+ */
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import Button from '../shared/Button';
 
+/**
+ * The top navigation header for public-facing pages.
+ * Features a responsive mobile menu toggle and dynamic active-state routing links.
+ * 
+ * @returns {React.ReactElement} The rendered navigation bar.
+ */
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 

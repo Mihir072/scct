@@ -1,9 +1,18 @@
+/**
+ * Custom React hook for tracking anonymous page navigation metrics and traffic.
+ * @module hooks/usePageViewTracker
+ */
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { trackPageView } from '../api/leads';
 import { getCapturedUtms } from '../utils/utmCapture';
 
-// Generates a unique session ID if not exists
+/**
+ * Retrieves an existing anonymous session ID from session storage, or generates a new one.
+ * Session ID is bound to the tab lifecycle to track consecutive page hits.
+ * 
+ * @returns {string} The active alphanumeric session identifier.
+ */
 const getOrCreateSessionId = () => {
   if (typeof window === 'undefined') return '';
   let sessionId = sessionStorage.getItem('scct_session_id');
@@ -14,6 +23,10 @@ const getOrCreateSessionId = () => {
   return sessionId;
 };
 
+/**
+ * Silently records user navigation events whenever the react-router location changes.
+ * This hook should be mounted once at a high-level public layout wrapper.
+ */
 export const usePageViewTracker = () => {
   const location = useLocation();
 

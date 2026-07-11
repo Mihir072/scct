@@ -5,6 +5,9 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * Data Transfer Object (DTO) representing aggregated view counts for a specific URL path.
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

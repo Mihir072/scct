@@ -1,3 +1,7 @@
+/**
+ * Public Course Detailed View Page.
+ * @module pages/public/CourseDetail
+ */
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { BookOpen, Calendar, ShieldCheck, IndianRupee, ArrowLeft, ArrowRight, UserCheck } from 'lucide-react';
@@ -8,6 +12,12 @@ import Button from '../../components/shared/Button';
 import LoadingSpinner from '../../components/shared/LoadingSpinner';
 import { formatCurrency } from '../../utils/formatters';
 
+/**
+ * Renders comprehensive details for a single academic course.
+ * Dynamically fetches course data by URL slug and resolves associated teaching faculty.
+ * 
+ * @returns {React.ReactElement} The rendered course detail view.
+ */
 const CourseDetail = () => {
   const { slug } = useParams();
   const [course, setCourse] = useState(null);

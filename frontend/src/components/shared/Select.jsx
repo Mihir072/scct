@@ -1,5 +1,23 @@
+/**
+ * Shared Select Component.
+ * @module components/shared/Select
+ */
 import React, { forwardRef } from 'react';
 
+/**
+ * A styled wrapper around the native HTML select dropdown element.
+ * Uses `forwardRef` to integrate smoothly with form libraries like react-hook-form.
+ * 
+ * @param {Object} props - React component props.
+ * @param {string} [props.label] - Optional text label displayed above the dropdown.
+ * @param {string} props.id - The unique HTML ID linking the label to the select.
+ * @param {Object|string} [props.error] - Validation error object or message to display.
+ * @param {Array<{value: string, label: string}>} [props.options=[]] - The list of dropdown options.
+ * @param {string} [props.placeholder='Select an option'] - The default unselected prompt option.
+ * @param {string} [props.className=''] - Additional CSS classes for the container.
+ * @param {React.Ref} ref - The forwarded React ref object.
+ * @returns {React.ReactElement} The rendered select component.
+ */
 const Select = forwardRef(({
   label,
   id,

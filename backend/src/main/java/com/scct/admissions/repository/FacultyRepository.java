@@ -9,6 +9,10 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 import java.util.UUID;
 
+/**
+ * Data Access Object (DAO) for querying {@link Faculty} member data.
+ * Supports dynamic filtering by department and course association.
+ */
 @Repository
 public interface FacultyRepository extends JpaRepository<Faculty, UUID> {
 

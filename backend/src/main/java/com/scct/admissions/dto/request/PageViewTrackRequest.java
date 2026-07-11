@@ -5,6 +5,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * Data Transfer Object (DTO) for logging incoming public page views.
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

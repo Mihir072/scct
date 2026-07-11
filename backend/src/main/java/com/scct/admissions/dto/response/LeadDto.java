@@ -8,6 +8,10 @@ import lombok.NoArgsConstructor;
 import java.time.OffsetDateTime;
 import java.util.UUID;
 
+/**
+ * Data Transfer Object (DTO) representing a comprehensive lead record for admin dashboard consumption.
+ * Safely exposes entity fields along with joined course data.
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

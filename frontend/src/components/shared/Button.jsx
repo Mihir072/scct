@@ -1,5 +1,23 @@
+/**
+ * Shared Button Component.
+ * @module components/shared/Button
+ */
 import React from 'react';
 
+/**
+ * A customizable button component with predefined style variants and sizes.
+ * 
+ * @param {Object} props - React component props.
+ * @param {React.ReactNode} props.children - The button content.
+ * @param {string} [props.type='button'] - The HTML button type.
+ * @param {string} [props.variant='primary'] - The visual style variant (primary, secondary, outline, accent, danger, ghost).
+ * @param {string} [props.size='md'] - The size variant (sm, md, lg).
+ * @param {Function} [props.onClick] - Click event handler.
+ * @param {boolean} [props.disabled=false] - Whether the button is disabled.
+ * @param {string} [props.className=''] - Additional CSS classes.
+ * @param {string} [props.id] - Optional HTML ID attribute.
+ * @returns {React.ReactElement} The rendered button element.
+ */
 const Button = ({
   children,
   type = 'button',

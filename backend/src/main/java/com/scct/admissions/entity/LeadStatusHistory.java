@@ -7,6 +7,10 @@ import org.hibernate.annotations.CreationTimestamp;
 import java.time.OffsetDateTime;
 import java.util.UUID;
 
+/**
+ * Maintains an audit trail of status transitions for a specific {@link Lead}.
+ * Records the previous status, new status, and the admin user who initiated the change.
+ */
 @Entity
 @Table(name = "lead_status_history")
 @Getter

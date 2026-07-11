@@ -1,7 +1,22 @@
+/**
+ * Public Placement Statistics Component.
+ * @module components/public/PlacementStat
+ */
 import React from 'react';
 import { Award, TrendingUp, Briefcase } from 'lucide-react';
 import { formatCurrency, formatPackage } from '../../utils/formatters';
 
+/**
+ * Renders a row of high-level placement achievement metrics (Total Placed, Avg Package, Top Recruiters).
+ * 
+ * @param {Object} props - React component props.
+ * @param {Object} [props.summary] - The aggregated placement metrics object.
+ * @param {number} [props.summary.totalPlaced] - The total number of students placed.
+ * @param {number} [props.summary.avgPackage] - The average salary package in LPA.
+ * @param {Array<string>} [props.summary.topRecruiters] - List of top hiring companies.
+ * @param {boolean} [props.loading=false] - Whether the data is currently being fetched (shows skeleton loader).
+ * @returns {React.ReactElement|null} The rendered statistics panels, skeleton loaders, or null if empty.
+ */
 const PlacementStat = ({ summary, loading = false }) => {
   if (loading) {
     return (

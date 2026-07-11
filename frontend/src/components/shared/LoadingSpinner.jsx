@@ -1,5 +1,17 @@
+/**
+ * Shared Loading Spinner Component.
+ * @module components/shared/LoadingSpinner
+ */
 import React from 'react';
 
+/**
+ * A visual animated spinner to indicate asynchronous loading states.
+ * 
+ * @param {Object} props - React component props.
+ * @param {string} [props.size='medium'] - The dimensions of the spinner (small, medium, large).
+ * @param {string} [props.className=''] - Additional CSS classes for the container.
+ * @returns {React.ReactElement} The rendered spinner element.
+ */
 const LoadingSpinner = ({ size = 'medium', className = '' }) => {
   const sizeClasses = {
     small: 'h-4 w-4 border-2',

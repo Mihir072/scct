@@ -7,6 +7,9 @@ import lombok.NoArgsConstructor;
 
 import java.util.UUID;
 
+/**
+ * Data Transfer Object (DTO) representing the admission conversion rate for a specific course.
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

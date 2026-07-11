@@ -7,6 +7,10 @@ import org.hibernate.annotations.CreationTimestamp;
 import java.time.OffsetDateTime;
 import java.util.UUID;
 
+/**
+ * Represents a faculty or staff member associated with the institution.
+ * Instructors can be optionally mapped to a specific {@link Course}.
+ */
 @Entity
 @Table(name = "faculty")
 @Getter

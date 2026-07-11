@@ -10,6 +10,10 @@ import org.springframework.stereotype.Repository;
 
 import java.util.UUID;
 
+/**
+ * Data Access Object (DAO) for querying the audit trail of {@link LeadStatusHistory}.
+ * Enables funnel analytics by counting how many leads reached a specific pipeline stage.
+ */
 @Repository
 public interface LeadStatusHistoryRepository extends JpaRepository<LeadStatusHistory, UUID> {
 

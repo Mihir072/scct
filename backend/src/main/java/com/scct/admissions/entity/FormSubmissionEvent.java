@@ -7,6 +7,10 @@ import org.hibernate.annotations.CreationTimestamp;
 import java.time.OffsetDateTime;
 import java.util.UUID;
 
+/**
+ * Tracks individual form submission events for system health monitoring.
+ * Logs whether a submission succeeded, failed validation, or encountered a server error.
+ */
 @Entity
 @Table(name = "form_submission_events")
 @Getter

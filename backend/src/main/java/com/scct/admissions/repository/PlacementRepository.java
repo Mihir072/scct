@@ -9,6 +9,10 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 import java.util.UUID;
 
+/**
+ * Data Access Object (DAO) for retrieving {@link Placement} statistics.
+ * Aggregates placement data to calculate average packages, total hires, and top recruiting companies.
+ */
 @Repository
 public interface PlacementRepository extends JpaRepository<Placement, UUID> {
 

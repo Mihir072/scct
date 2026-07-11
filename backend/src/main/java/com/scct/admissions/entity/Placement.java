@@ -8,6 +8,10 @@ import java.math.BigDecimal;
 import java.time.OffsetDateTime;
 import java.util.UUID;
 
+/**
+ * Represents a historical record of student placements for a specific academic year and course.
+ * Tracks the hiring company, salary package offered, and total students recruited.
+ */
 @Entity
 @Table(name = "placements")
 @Getter

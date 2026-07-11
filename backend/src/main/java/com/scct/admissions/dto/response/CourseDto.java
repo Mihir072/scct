@@ -8,6 +8,9 @@ import lombok.NoArgsConstructor;
 import java.math.BigDecimal;
 import java.util.UUID;
 
+/**
+ * Data Transfer Object (DTO) for safely exposing course details to public or admin clients.
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

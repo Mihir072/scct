@@ -7,6 +7,9 @@ import com.scct.admissions.dto.response.SiteHealthDto;
 import java.time.OffsetDateTime;
 import java.util.UUID;
 
+/**
+ * Service interface defining operations for generating administrative dashboard metrics and funnel analytics.
+ */
 public interface DashboardService {
     SiteHealthDto getSiteHealth(OffsetDateTime from, OffsetDateTime to);
     FunnelDto getFunnelMetrics(UUID courseId, String source);
