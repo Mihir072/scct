@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: scct-postgres
+    environment:
+      POSTGRES_DB: neondb
+      POSTGRES_USER: neondb_owner
+      POSTGRES_PASSWORD: npg_4MXkcWuhp5fn
+    ports:
+      - "5432:5432"
+    volumes:
+      - scct-postgres-data:/var/lib/postgresql/data
+
+volumes:
+  scct-postgres-data:
