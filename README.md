@@ -4,6 +4,12 @@ Welcome to the **Sanpada College of Commerce & Technology (SCCT)** Admissions an
 
 ---
 
+## 🌐 Live Production Links
+*   **Production Frontend (Vercel):** [https://scct-mu.vercel.app](https://scct-mu.vercel.app)
+*   **Production API Server (Render):** [https://scct.onrender.com](https://scct.onrender.com)
+
+---
+
 ## 🛠️ Tech Stack Overview
 
 ### Backend (Spring Boot)
@@ -79,7 +85,8 @@ Welcome to the **Sanpada College of Commerce & Technology (SCCT)** Admissions an
 
 ### Seed Admin Credentials
 To access the Admin Dashboard, log in using:
-*   **URL:** `http://localhost:3000/login`
+*   **Local Login URL:** `http://localhost:3000/login`
+*   **Production Login URL:** `https://scct-mu.vercel.app/login`
 *   **Username:** `admin`
 *   **Password:** `password123`
 
@@ -88,17 +95,18 @@ To access the Admin Dashboard, log in using:
 ## ☁️ Production & Cloud Deployment Settings
 
 ### Backend (Render Deployment)
-The backend includes a `Dockerfile` for containerized environments:
+The backend is deployed at **[https://scct.onrender.com](https://scct.onrender.com)**. It includes a `Dockerfile` for containerized environment:
 *   **Multi-Stage Build:** Packages compile assets using `maven:3.9-eclipse-temurin-21-alpine` and outputs to a lightweight `eclipse-temurin:21-jre-alpine` runtime.
 *   **Dynamic Port Mapping:** Configured in `application.yaml` to dynamically bind to Render's allocated `${PORT}` environment variable.
 *   **Keep-Alive Ping Scheduler:** Render's free tier automatically spins down containers after 15 minutes of inactivity. To prevent this, the backend includes [SelfPingKeepAlive.java](file:///c:/Users/admin/Downloads/scct/backend/src/main/java/com/scct/admissions/service/impl/SelfPingKeepAlive.java) which runs a scheduler every 4 seconds:
-    *   It retrieves the public server URL from the `${RENDER_EXTERNAL_URL}` environment variable.
+    *   It retrieves the public server URL from the `${RENDER_EXTERNAL_URL}` environment variable (defaulting to the live `https://scct.onrender.com` URL in production).
     *   It issues a self-directed `GET` request to its own public `/api/courses` endpoint.
     *   Because the traffic routes through Render's load balancer, the container **never spins down and stays constantly alive**. Successful ping summaries are throttled to log once every 5 minutes to avoid cluttering.
 
 ### Frontend (Vercel Deployment)
+The frontend is deployed at **[https://scct-mu.vercel.app](https://scct-mu.vercel.app)**.
 *   **Rewrites Logic:** Configured in [vercel.json](file:///c:/Users/admin/Downloads/scct/frontend/vercel.json) to rewrite all virtual routing paths to `/index.html`. This ensures direct links and refreshes on endpoints like `/admissions` or `/dashboard` do not trigger Vercel 404 errors.
-*   **Build Environment:** Set the environment variable `VITE_API_BASE_URL` in the Vercel dashboard to point to your live Render backend URL.
+*   **Build Environment:** The production build loads the API base URL from the newly created [`.env.production`](file:///c:/Users/admin/Downloads/scct/frontend/.env.production) file which is pre-configured with `VITE_API_BASE_URL=https://scct.onrender.com`. Alternatively, you can override this by setting the environment variable `VITE_API_BASE_URL` in the Vercel dashboard.
 
 ---
 
