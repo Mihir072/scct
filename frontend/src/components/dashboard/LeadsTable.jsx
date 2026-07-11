@@ -1,26 +1,9 @@
-/**
- * Admin Dashboard Leads Data Table Component.
- * @module components/dashboard/LeadsTable
- */
 import React, { useState } from 'react';
 import { Mail, Phone, Calendar, AlertTriangle, Eye, ArrowUpDown } from 'lucide-react';
 import StatusBadge from './StatusBadge';
 import Button from '../shared/Button';
 import { formatDate } from '../../utils/formatters';
 
-/**
- * Renders a comprehensive data table of leads with sorting, status transition controls, and duplicate flagging.
- * 
- * @param {Object} props - React component props.
- * @param {Array} [props.leads=[]] - The paginated array of lead objects.
- * @param {boolean} [props.loading=false] - Whether the table is currently loading data.
- * @param {Function} props.onStatusChange - Async callback for changing a lead's pipeline status.
- * @param {Function} props.onViewDetails - Callback to trigger the lead details modal.
- * @param {string} props.sortBy - The current active sorting field.
- * @param {string} props.sortDir - The current sorting direction (asc/desc).
- * @param {Function} props.onSort - Callback for handling column header clicks to change sorting.
- * @returns {React.ReactElement} The rendered leads data table.
- */
 const LeadsTable = ({
   leads = [],
   loading = false,
@@ -118,8 +101,8 @@ const LeadsTable = ({
             const isTerminal = allowed.length === 0;
 
             return (
-              <tr 
-                key={lead.id} 
+              <tr
+                key={lead.id}
                 className={`hover:bg-slate-50/50 transition-colors ${lead.isDuplicate ? 'bg-amber-50/20' : ''}`}
               >
                 {/* Full name and duplicate flag */}
@@ -127,7 +110,7 @@ const LeadsTable = ({
                   <div className="flex items-center gap-2">
                     <div className="font-semibold text-slate-800">{lead.fullName}</div>
                     {lead.isDuplicate && (
-                      <span 
+                      <span
                         className="inline-flex items-center gap-0.5 px-2 py-0.5 rounded text-[10px] font-bold bg-amber-100 text-amber-800"
                         title={`Duplicate of lead: ${lead.duplicateOfLeadId}`}
                       >

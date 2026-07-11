@@ -1,24 +1,6 @@
-/**
- * Public Faculty Card Component.
- * @module components/public/FacultyCard
- */
 import React from 'react';
 import { Award, Mail, GraduationCap } from 'lucide-react';
 
-/**
- * Renders an informational profile card for a faculty or staff member.
- * 
- * @param {Object} props - React component props.
- * @param {Object} props.faculty - The faculty data object.
- * @param {string} props.faculty.name - Faculty member's full name.
- * @param {string} props.faculty.designation - Job title or academic rank.
- * @param {string} props.faculty.department - Associated department.
- * @param {string} props.faculty.qualification - Academic degrees and credentials.
- * @param {string} props.faculty.bio - Short biographical summary.
- * @param {string} [props.faculty.photoUrl] - Optional URL to a headshot image.
- * @param {string} [props.faculty.courseName] - Optional specific course association.
- * @returns {React.ReactElement} The rendered faculty profile card.
- */
 const FacultyCard = ({ faculty }) => {
   const { name, designation, department, qualification, bio, photoUrl, courseName } = faculty;
 

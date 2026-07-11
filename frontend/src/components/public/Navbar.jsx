@@ -1,18 +1,8 @@
-/**
- * Public Global Navigation Bar Component.
- * @module components/public/Navbar
- */
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import Button from '../shared/Button';
 
-/**
- * The top navigation header for public-facing pages.
- * Features a responsive mobile menu toggle and dynamic active-state routing links.
- * 
- * @returns {React.ReactElement} The rendered navigation bar.
- */
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -25,10 +15,9 @@ const Navbar = () => {
   ];
 
   const activeStyle = ({ isActive }) =>
-    `text-sm font-semibold transition-colors duration-200 border-b-2 py-1 ${
-      isActive 
-        ? 'text-academic-maroon border-academic-maroon' 
-        : 'text-academic-navy border-transparent hover:text-academic-maroon'
+    `text-sm font-semibold transition-colors duration-200 border-b-2 py-1 ${isActive
+      ? 'text-academic-maroon border-academic-maroon'
+      : 'text-academic-navy border-transparent hover:text-academic-maroon'
     }`;
 
   return (
@@ -91,10 +80,9 @@ const Navbar = () => {
                 to={link.to}
                 onClick={() => setIsOpen(false)}
                 className={({ isActive }) =>
-                  `block px-3 py-2 rounded-md text-base font-semibold ${
-                    isActive
-                      ? 'bg-academic-navy text-white'
-                      : 'text-academic-navy hover:bg-slate-100 hover:text-academic-maroon'
+                  `block px-3 py-2 rounded-md text-base font-semibold ${isActive
+                    ? 'bg-academic-navy text-white'
+                    : 'text-academic-navy hover:bg-slate-100 hover:text-academic-maroon'
                   }`
                 }
               >

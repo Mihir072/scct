@@ -1,7 +1,3 @@
-/**
- * Admin Leads Management Page.
- * @module pages/dashboard/Leads
- */
 import React, { useState, useEffect, useCallback } from 'react';
 import { getAdminLeads, updateLeadStatus, exportLeadsCsv } from '../../api/leads';
 import { getCourses } from '../../api/courses';
@@ -17,12 +13,6 @@ import { useDebounce } from '../../hooks/useDebounce';
 import { usePagination } from '../../hooks/usePagination';
 import { formatDate } from '../../utils/formatters';
 
-/**
- * Renders the primary CRM interface for managing and transitioning lead records.
- * Features advanced filtering, debounced text search, pagination, inline status transitions, and a detailed profile modal.
- * 
- * @returns {React.ReactElement} The rendered leads management page.
- */
 const Leads = () => {
   const [leadsData, setLeadsData] = useState(null);
   const [courses, setCourses] = useState([]);

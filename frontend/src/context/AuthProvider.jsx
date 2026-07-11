@@ -1,7 +1,3 @@
-/**
- * Authentication context provider component.
- * @module context/AuthProvider
- */
 import React, { useState, useEffect } from 'react';
 import { AuthContext } from './AuthContext';
 import { loginAdmin as apiLoginAdmin, logoutAdmin as apiLogoutAdmin } from '../api/auth';
@@ -10,13 +6,6 @@ import { setClientToken } from '../api/client';
 const TOKEN_STORAGE_KEY = 'scct_admin_token';
 const USER_STORAGE_KEY = 'scct_admin_user';
 
-/**
- * Wraps the application tree to provide authentication state, login, and logout capabilities globally.
- * 
- * @param {Object} props - React component properties.
- * @param {React.ReactNode} props.children - The child components requiring auth access.
- * @returns {React.ReactElement} The AuthContext Provider wrapper.
- */
 export const AuthProvider = ({ children }) => {
   const [token, setToken] = useState(null);
   const [user, setUser] = useState(null);

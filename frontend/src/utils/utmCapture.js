@@ -1,11 +1,3 @@
-/**
- * Utility functions for capturing and retrieving UTM marketing parameters.
- * @module utils/utmCapture
- */
-
-/**
- * Extracts standard UTM parameters from the current URL query string and persists them to session storage.
- */
 export const captureUtmParameters = () => {
   if (typeof window === 'undefined') return;
 
@@ -20,11 +12,6 @@ export const captureUtmParameters = () => {
   });
 };
 
-/**
- * Retrieves the persisted UTM marketing parameters from session storage.
- * 
- * @returns {Object} An object containing the extracted UTM parameters (source, medium, campaign, term, content).
- */
 export const getCapturedUtms = () => {
   if (typeof window === 'undefined') return {};
 

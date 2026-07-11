@@ -1,7 +1,3 @@
-/**
- * Admin Funnel Analytics Page.
- * @module pages/dashboard/Funnel
- */
 import React, { useState, useEffect, useCallback } from 'react';
 import { getFunnelMetrics, getConversionMetrics, exportFunnelCsv } from '../../api/dashboard';
 import { getCourses } from '../../api/courses';
@@ -13,12 +9,6 @@ import LoadingSpinner from '../../components/shared/LoadingSpinner';
 import usePolling from '../../hooks/usePolling';
 import { Download, Filter } from 'lucide-react';
 
-/**
- * Renders the dedicated page for visualizing lead conversion funnel metrics and data charts.
- * Includes interactive filters (by course, source) and a CSV export utility.
- * 
- * @returns {React.ReactElement} The rendered funnel analytics page.
- */
 const Funnel = () => {
   const [funnelData, setFunnelData] = useState(null);
   const [conversionData, setConversionData] = useState(null);

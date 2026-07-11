@@ -1,7 +1,3 @@
-/**
- * Custom React hook for establishing periodic data polling routines.
- * @module hooks/usePolling
- */
 import { useEffect, useRef } from 'react';
 
 /**
@@ -30,7 +26,7 @@ const usePolling = (callback, intervalMs = 30000, deps = []) => {
 
     // Cleanup on unmount or when deps/intervalMs change
     return () => clearInterval(id);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [...deps, intervalMs]);
 };
 

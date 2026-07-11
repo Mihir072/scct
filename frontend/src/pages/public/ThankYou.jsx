@@ -1,18 +1,8 @@
-/**
- * Public Thank You Confirmation Page.
- * @module pages/public/ThankYou
- */
 import React from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import { CheckCircle2, Home, BookOpen, ArrowRight } from 'lucide-react';
 import Button from '../../components/shared/Button';
 
-/**
- * Renders a success confirmation view displayed immediately after a lead successfully submits an enquiry.
- * Displays the generated lead reference ID if available in the route state.
- * 
- * @returns {React.ReactElement} The rendered confirmation page.
- */
 const ThankYou = () => {
   const location = useLocation();
   const leadId = location.state?.leadId || null;

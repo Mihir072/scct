@@ -1,7 +1,3 @@
-/**
- * Admin Dashboard Home Page.
- * @module pages/dashboard/DashboardHome
- */
 import React, { useState, useCallback } from 'react';
 import { getAdminLeadsSummary } from '../../api/leads';
 import { getSiteHealth } from '../../api/dashboard';
@@ -13,13 +9,6 @@ import Button from '../../components/shared/Button';
 
 const POLL_INTERVAL = 30000; // 30 seconds
 
-/**
- * Renders the primary landing view for the authenticated admin dashboard.
- * Displays high-level KPI cards and breakdown charts for lead status and sources.
- * Data is automatically polled every 30 seconds for live updates.
- * 
- * @returns {React.ReactElement} The rendered dashboard overview.
- */
 const DashboardHome = () => {
   const [summary, setSummary] = useState(null);
   const [health, setHealth] = useState(null);

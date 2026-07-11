@@ -8,11 +8,6 @@ import org.hibernate.annotations.UpdateTimestamp;
 import java.time.OffsetDateTime;
 import java.util.UUID;
 
-/**
- * Represents an incoming student admission enquiry (a "lead").
- * Captures personal contact details, the course of interest, source tracking (UTMs),
- * and the current status within the recruitment pipeline.
- */
 @Entity
 @Table(name = "leads")
 @Getter

@@ -1,16 +1,5 @@
-/**
- * Shared Lead Status Badge Component.
- * @module components/dashboard/StatusBadge
- */
 import React from 'react';
 
-/**
- * Renders a colored, rounded badge corresponding to a specific lead pipeline status.
- * 
- * @param {Object} props - React component props.
- * @param {string} props.status - The exact enum status string (e.g., 'NEW', 'ADMITTED').
- * @returns {React.ReactElement} The rendered stylized badge.
- */
 const StatusBadge = ({ status }) => {
   const styles = {
     NEW: 'bg-blue-50 text-blue-700 border-blue-200',

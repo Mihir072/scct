@@ -1,23 +1,7 @@
-/**
- * Shared Pagination Controls Component.
- * @module components/shared/Pagination
- */
 import React from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Button from './Button';
 
-/**
- * Renders a set of pagination controls to navigate through pages of data.
- * Includes intelligent truncation ("...") for large page counts.
- * 
- * @param {Object} props - React component props.
- * @param {number} props.currentPage - The current zero-indexed active page.
- * @param {number} props.totalPages - The total number of available pages.
- * @param {Function} props.onPageChange - Callback invoked when a page number or arrow is clicked.
- * @param {number} props.totalElements - The absolute total number of items across all pages.
- * @param {number} props.size - The maximum number of items displayed per page.
- * @returns {React.ReactElement|null} The rendered pagination UI or null if 1 page or fewer.
- */
 const Pagination = ({
   currentPage,
   totalPages,

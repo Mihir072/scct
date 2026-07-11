@@ -8,12 +8,9 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.UUID;
 
-/**
- * Data Access Object (DAO) for managing {@link Lead} entities.
- * Provides custom queries for deduplication, counting, and generating dashboard analytics (status and source breakdowns).
- */
 @Repository
 public interface LeadRepository extends JpaRepository<Lead, UUID>, JpaSpecificationExecutor<Lead> {
 

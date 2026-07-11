@@ -1,24 +1,7 @@
-/**
- * Shared Modal Dialog Component.
- * @module components/shared/Modal
- */
 import React, { useEffect } from 'react';
 import { X } from 'lucide-react';
 import Button from './Button';
 
-/**
- * A reusable, accessible modal overlay component.
- * Handles scrolling lock and escape-key dismissal automatically.
- * 
- * @param {Object} props - React component props.
- * @param {boolean} props.isOpen - Controls the visibility of the modal.
- * @param {Function} props.onClose - Callback invoked when the modal requests to close.
- * @param {string} props.title - The text displayed in the modal header.
- * @param {React.ReactNode} props.children - The main content body of the modal.
- * @param {React.ReactNode} [props.footer] - Optional footer content (usually action buttons).
- * @param {string} [props.size='md'] - The maximum width variant (sm, md, lg, xl).
- * @returns {React.ReactElement|null} The rendered modal or null if closed.
- */
 const Modal = ({
   isOpen,
   onClose,

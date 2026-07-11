@@ -7,12 +7,9 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.UUID;
 
-/**
- * Data Access Object (DAO) for logging and retrieving {@link PageView} telemetry.
- * Used for generating traffic reports bounded by date ranges.
- */
 @Repository
 public interface PageViewRepository extends JpaRepository<PageView, UUID> {
 

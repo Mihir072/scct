@@ -1,17 +1,7 @@
-/**
- * Public Global Footer Component.
- * @module components/public/Footer
- */
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, MapPin } from 'lucide-react';
 
-/**
- * The standard footer displayed across all public-facing pages.
- * Includes institution branding, quick navigational links, and contact information.
- * 
- * @returns {React.ReactElement} The rendered global footer component.
- */
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 

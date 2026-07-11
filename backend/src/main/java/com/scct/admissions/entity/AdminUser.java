@@ -7,9 +7,6 @@ import org.hibernate.annotations.CreationTimestamp;
 import java.time.OffsetDateTime;
 import java.util.UUID;
 
-/**
- * Represents an administrative user capable of accessing the dashboard and managing leads.
- */
 @Entity
 @Table(name = "admin_users")
 @Getter

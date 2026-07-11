@@ -7,10 +7,6 @@ import lombok.NoArgsConstructor;
 
 import java.util.Map;
 
-/**
- * Data Transfer Object (DTO) providing aggregated metrics for the admin dashboard home view.
- * Includes total lead counts and breakdowns by status and acquisition source.
- */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

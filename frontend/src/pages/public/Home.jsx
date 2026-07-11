@@ -1,7 +1,3 @@
-/**
- * Public Home Landing Page.
- * @module pages/public/Home
- */
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, BookOpen, Users, Compass, HelpCircle } from 'lucide-react';
@@ -12,12 +8,6 @@ import PlacementStat from '../../components/public/PlacementStat';
 import Button from '../../components/shared/Button';
 import LoadingSpinner from '../../components/shared/LoadingSpinner';
 
-/**
- * Renders the primary landing page of the public website.
- * Features hero banners, placement statistics highlights, featured courses, and a CTA for admissions.
- * 
- * @returns {React.ReactElement} The rendered home page view.
- */
 const Home = () => {
   const [courses, setCourses] = useState([]);
   const [placementSummary, setPlacementSummary] = useState(null);

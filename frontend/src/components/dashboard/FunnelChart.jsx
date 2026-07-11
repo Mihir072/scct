@@ -1,7 +1,3 @@
-/**
- * Admin Dashboard Funnel Chart Component.
- * @module components/dashboard/FunnelChart
- */
 import React from 'react';
 import {
   BarChart,
@@ -15,15 +11,6 @@ import {
   LabelList,
 } from 'recharts';
 
-/**
- * Renders a horizontal bar chart representing the recruitment conversion funnel.
- * Displays counts at each stage and calculates drop-off percentages between sequential stages.
- * 
- * @param {Object} props - React component props.
- * @param {Array} [props.data=[]] - The sequential funnel stage data points.
- * @param {boolean} [props.loading=false] - Whether the data is currently fetching.
- * @returns {React.ReactElement} The rendered funnel chart and drop-off metrics.
- */
 const FunnelChart = ({ data = [], loading = false }) => {
   if (loading) {
     return (

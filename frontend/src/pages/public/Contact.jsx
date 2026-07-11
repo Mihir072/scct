@@ -1,15 +1,6 @@
-/**
- * Public Contact Us Page.
- * @module pages/public/Contact
- */
 import React from 'react';
 import { Mail, MapPin, Clock, ShieldAlert } from 'lucide-react';
 
-/**
- * Renders contact information including institutional address, email, visiting hours, and an embedded Google Maps iframe.
- * 
- * @returns {React.ReactElement} The rendered contact page view.
- */
 const Contact = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8 flex flex-col gap-10">

@@ -9,10 +9,6 @@ import org.springframework.data.domain.Page;
 import java.util.List;
 import java.util.UUID;
 
-/**
- * Core service interface encapsulating all business logic for admission lead management.
- * Handles lead creation, duplication detection, status updates, pagination, and exporting.
- */
 public interface LeadService {
     LeadCreateResponse createLead(LeadCreateRequest request);
     Page<LeadDto> getLeads(int page, int size, String status, UUID courseId, String source, Boolean isDuplicate, String search, String sortBy, String sortDir);

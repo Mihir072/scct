@@ -8,10 +8,6 @@ import org.springframework.stereotype.Repository;
 import java.time.OffsetDateTime;
 import java.util.UUID;
 
-/**
- * Data Access Object (DAO) for tracking and counting {@link FormSubmissionEvent} telemetry.
- * Used for system health monitoring and dashboard diagnostics.
- */
 @Repository
 public interface FormSubmissionEventRepository extends JpaRepository<FormSubmissionEvent, UUID> {
 

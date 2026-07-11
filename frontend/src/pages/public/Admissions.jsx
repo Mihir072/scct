@@ -1,7 +1,3 @@
-/**
- * Public Admissions Enquiry Form Page.
- * @module pages/public/Admissions
- */
 import React, { useState, useEffect } from 'react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
@@ -30,13 +26,6 @@ const enquirySchema = z.object({
   message: z.string().optional().or(z.literal('')),
 });
 
-/**
- * Renders the multi-step admissions enquiry form for prospective students.
- * Integrates Zod schema validation, react-hook-form state management, and UTM parameter capture.
- * Submits lead data to the backend API and redirects to a success page.
- * 
- * @returns {React.ReactElement} The rendered admissions form view.
- */
 const Admissions = () => {
   const [courses, setCourses] = useState([]);
   const [searchParams] = useSearchParams();
@@ -91,10 +80,10 @@ const Admissions = () => {
 
   // Navigate forward in the multi-step form after validation
   const handleNext = async () => {
-    const fieldsToValidate = step === 1 
-      ? ['fullName', 'email', 'phone', 'courseId'] 
+    const fieldsToValidate = step === 1
+      ? ['fullName', 'email', 'phone', 'courseId']
       : ['message'];
-      
+
     const isStepValid = await trigger(fieldsToValidate);
     if (isStepValid) {
       setStep((prev) => prev + 1);
@@ -130,7 +119,7 @@ const Admissions = () => {
     setSubmitting(true);
     try {
       const response = await createLead(submissionPayload);
-      
+
       // Even if response.isDuplicate is true, we still redirect to Thank You page silently.
       // Duplicate handling is a backend/staff concern, not user-facing.
       navigate('/thank-you', { state: { leadId: response.leadId } });

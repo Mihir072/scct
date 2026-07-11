@@ -12,10 +12,6 @@ import lombok.NoArgsConstructor;
 
 import java.util.UUID;
 
-/**
- * Data Transfer Object (DTO) for capturing new admission lead submissions.
- * Includes comprehensive validation rules and UTM parameter mappings.
- */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
